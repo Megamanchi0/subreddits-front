@@ -54,7 +54,6 @@ export default function Subreddits() {
       setIsLoading(true);
       const response = await saveSubredditsApi();;
       if (response.ok) {
-        const data = await response.json();
         getSubreddits(1);
         getPages();
       }else{
@@ -72,7 +71,6 @@ export default function Subreddits() {
       setIsLoading(true);
       const response = await deleteSubreddits();;
       if (response.ok) {
-        const data = await response.json();
         getSubreddits(1);
         getPages();
       }else{
@@ -85,13 +83,6 @@ export default function Subreddits() {
     }
   }
 
-  const avanzar = () => {
-    setpaginaActual(paginaActual+1);
-  }
-
-  const retroceder = () => {
-    setpaginaActual(paginaActual-1);
-  }
 
   return (
     <div className="md:w-[90%] mx-auto bg-gray-100 py-10 min-h-[100vh] border-t-4 border-t-[#FF5700]">

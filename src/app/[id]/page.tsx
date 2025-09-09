@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 export default function SubredditDetail() {
   const [subreddit, setSubreddit] = useState<Subreddit>();
-  const createdDate = new Date(subreddit?.created_utc! * 1000).toLocaleDateString();
+  const createdDate = new Date(subreddit!.created_utc! * 1000).toLocaleDateString();
   const params = useParams()
 
   useEffect(() => {
@@ -116,11 +116,11 @@ export default function SubredditDetail() {
                 )}
                 </div>
 
-                {subreddit?.allowed_media_in_comments!.length! > 0 && (
+                {subreddit!.allowed_media_in_comments!.length! > 0 && (
                 <div>
                     <h2 className="text-sm font-semibold text-gray-700 mb-2">Allowed media in comments:</h2>
                     <div className="flex flex-wrap gap-2">
-                    {subreddit?.allowed_media_in_comments!.map((media) => (
+                    {subreddit!.allowed_media_in_comments!.map((media) => (
                         <span
                         key={media.media_type_id}
                         className="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full"
