@@ -87,7 +87,7 @@ export default function Subreddits() {
   return (
     <div className="md:w-[90%] mx-auto bg-gray-100 py-10 min-h-[100vh] border-t-4 border-t-[#FF5700]">
       {/* <img className="mx-auto w-96" src="https://logos-world.net/wp-content/uploads/2023/12/Reddit-Logo.png" alt="Reddit" /> */}
-      <h2 className="text-center text-4xl font-bold">Lista de subreddits</h2>
+      <h2 className="text-center text-4xl font-bold text-black">Lista de subreddits</h2>
       <hr className="border-gray-300 w-10/12 mx-auto mt-8" />
       <div className="text-center">
         <button onClick={saveSubreddits} className="bg-[#FF5700] hover:bg-[#ec4f00] text-white py-1 px-4 cursor-pointer rounded-2xl mx-5 my-5">Consultar información en la API</button>
