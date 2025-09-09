@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 export default function Subreddits() {
   const [subreddits, setSubreddits] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [paginas, setPaginas] = useState<any[]>([]);
+  const [paginas, setPaginas] = useState<number[]>([]);
   const [paginaActual, setpaginaActual] = useState<number>(1);
 
   useEffect(() => {
