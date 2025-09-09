@@ -7,10 +7,6 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-type Props = {
-  subreddit: Subreddit;
-};
-
 export default function SubredditDetail() {
   const [subreddit, setSubreddit] = useState<Subreddit>();
   const createdDate = new Date(subreddit?.created_utc! * 1000).toLocaleDateString();
