@@ -38,9 +38,9 @@ export default function SubredditDetail() {
     const createdDate = new Date(subreddit!.created_utc! * 1000).toLocaleDateString();
 
   return (
-    <div className="py-[9vh] bg-gray-100 md:w-10/12 mx-auto min-h-[100vh] px-5 md:flex">
+    <div className="py-[9vh] bg-gray-100 md:w-10/12 mx-auto min-h-[100vh] px-5 lg:flex">
         <Link href={"/"} >
-            <div className="md:absolute md:ml-16 w-10 h-10 flex items-center justify-center rounded-full bg-[#FF5700] text-white cursor-pointer mt-6 mb-5">
+            <div className="lg:absolute lg:ml-16 w-10 h-10 flex items-center justify-center rounded-full bg-[#FF5700] text-white cursor-pointer mt-6 mb-5">
                 <i className="fa-solid fa-arrow-left"></i>
             </div>
         </Link>
