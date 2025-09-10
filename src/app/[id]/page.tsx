@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 
 export default function SubredditDetail() {
   const [subreddit, setSubreddit] = useState<Subreddit>();
-  const createdDate = new Date(subreddit!.created_utc! * 1000).toLocaleDateString();
   const params = useParams()
 
   useEffect(() => {
@@ -35,6 +34,8 @@ export default function SubredditDetail() {
         </div>
     )
   }
+
+    const createdDate = new Date(subreddit!.created_utc! * 1000).toLocaleDateString();
 
   return (
     <div className="py-[9vh] bg-gray-100 md:w-10/12 mx-auto min-h-[100vh] px-5 flex">
